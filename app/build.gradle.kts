@@ -47,6 +47,11 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
+
 }
 
 dependencies {
@@ -66,4 +71,26 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+
+    implementation ("com.google.mlkit:barcode-scanning:17.2.0")
+    implementation ("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0")
+
+    val  camerax_version = "1.3.1"
+
+    // CameraX core library using camera2 implementation
+    implementation ("androidx.camera:camera-camera2:$camerax_version")
+
+    // CameraX Lifecycle Library
+    implementation ("androidx.camera:camera-lifecycle:$camerax_version")
+
+    // CameraX View class
+    implementation ("androidx.camera:camera-view:1.4.0-alpha03")
+    implementation ("com.google.zxing:core:3.4.1")
+
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
+
+
+
 }
